@@ -39,6 +39,7 @@ function Decode(fPort, bytes) {
         break;
       case 13:
         res.ext_btn = bytes[ptr++];
+        res.closed = (res.ext_btn == 1);
         break;
       case 15:
         res.motion = bytes[ptr++];
